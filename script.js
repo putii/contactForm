@@ -19,7 +19,7 @@ async function postData() {
 }
 
 
-function showMessage(message, type) {
+function showMessage(message) {
   const existingMessage = document.querySelector("#feedback-message");
   if (existingMessage) {
     existingMessage.remove();
