@@ -12,7 +12,7 @@
       <label for="name">Imię i nazwisko</label>
       <input id="name" type="text" name="name" placeholder="Imię i nazwisko" required>
 
-      <label for="mail">Adress E-mail</label>
+      <label for="mail">Adres E-mail</label>
       <input id="mail" type="text" name="mail" placeholder="Adres e-mail do kontaktu" required>
       
       <label for="subject">Temat</label>
