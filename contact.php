@@ -20,6 +20,8 @@
       
       <label id="message" for="name">Wiadomość</label>
       <textarea id="message" name="message" placeholder="Wiadomość" required></textarea>
+
+      <input type="text" id="website" name="website" autocomplete='off'/> <!-- honeypot  -->
       
       <input type="submit">
     </form>

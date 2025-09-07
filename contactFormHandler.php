@@ -1,6 +1,7 @@
 <?php
   if($_SERVER["REQUEST_METHOD"] == "POST") {
-    
+    if(!empty($_POST['website'])) die(); // honeypot
+
     $name = htmlspecialchars($_POST["name"]);
     $mail = htmlspecialchars($_POST["mail"]);
     $subject = htmlspecialchars($_POST["subject"]);
