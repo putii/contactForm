@@ -27,7 +27,7 @@ function showMessage(message) {
   
   const messageDiv = document.createElement("div");
   messageDiv.textContent = message;
-  messageDiv.id = "#feedback-message";
+  messageDiv.id = "feedback-message";
   
   const form = document.getElementById("form");
   form.parentNode.insertBefore(messageDiv, form.nextSibling);

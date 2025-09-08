@@ -71,3 +71,12 @@ button:hover {
 }
 
 form #website{ display:none; } /* honeypot */
+
+#feedback-message {
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px;
+  background-color: #ddcaff;
+  color: #4800c7;
+  border-radius: 5px;
+}
