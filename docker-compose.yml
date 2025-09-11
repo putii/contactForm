@@ -7,17 +7,17 @@ services:
       - "127.0.0.1:4001:4000"
     depends_on:
       - db
-
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
   db:
     image: mysql:9.4.0
     volumes:
       - db_data:/var/lib/mysql
       - ./dbInit.sql:/docker-entrypoint-initdb.d/dbInit.sql
     environment:
-      MYSQL_ROOT_PASSWORD: pass123
-      MYSQL_DATABASE: contactdb
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} 
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
 
 volumes:
   db_data:
-
-# update later with this config: https://docs.docker.com/guides/php/develop/

@@ -1,8 +1,8 @@
 <?php
   $serveraddress = "db";
-  $dbname = "contactdb";
+  $dbname = getenv("MYSQL_DATABASE");
   $username = "root";
-  $password = "pass123";
+  $password = getenv("MYSQL_ROOT_PASSWORD");
   
   try {
     $pdo = new PDO(
