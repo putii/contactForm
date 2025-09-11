@@ -1,4 +1,6 @@
 <?php
+  require_once "db_pdo.php";
+
   if($_SERVER["REQUEST_METHOD"] == "POST") {
     if(!empty($_POST['website'])) die(); // honeypot
 
@@ -17,5 +19,16 @@
       http_response_code(500);
       echo json_encode(['status' => 'error', 'message' => 'Błąd serwera, kontakt nieudany.']);
     }
-  }
+
+    // saving to db on top of saving to file
+
+    try {
+      $stmt = $pdo->prepare(
+        "INSERT INTO messages (name, email, subject, message, send_at) VALUES (?, ?, ?, ?, NOW())"
+      );
+      $stmt->execute([$name, $mail, $subject, $message]);
+    } catch (PDOException $e) {
+        echo "Exception thrown: $e";
+    }
+  } 
 ?>
