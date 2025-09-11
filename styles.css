@@ -125,3 +125,34 @@ td {
   background-color: var(--green-light-1);
   color: var(--text-color-dark)
 }
+
+header {
+  background-color: var(--purple-dark-4);
+}
+
+header h1 {
+  text-align: center;
+  padding: 16px 0 0 0;
+}
+
+nav ul {
+  list-style: none;
+  overflow: hidden;
+  display: block;
+  padding: 16px;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  color: var(--text-color-light);
+}
+
+nav ul li a:hover {
+  background-color: var(--purple-dark-2);
+}

@@ -7,7 +7,7 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <header></header>
+    <?php include "header.php" ?>
 
     <div class="container">
       <h1>Kontakt</h1>
@@ -36,6 +36,6 @@
       </form>
     </div>
 
-    <footer></footer>
+    <?php include "footer.php" ?>
   </body>
 </html>

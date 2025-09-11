@@ -1,31 +1,16 @@
 <!DOCTYPE html>
+<?php
+  require_once "db_pdo.php";
+?>
 <html>
   <head>
     <link rel="stylesheet" href="styles.css">
     <title>Wiadomości</title>
   </head>
   <body>
-    <head></head>
-    <?php
-      $serveraddress = "db";
-      $dbname = "contactdb";
-      $username = "root";
-      $password = "pass123";
-      
-      try {
-        $pdo = new PDO(
-          "mysql:host=$serveraddress;dbname=$dbname",
-          $username,
-          $password
-        );
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-
-      } catch (PDOException $e) {
-        echo "Exception thrown: $e";
-      }
-    ?>
+    <?php include "header.php" ?>
     <div class="container messages">
+      <h1>Wiadomości</h1>
       <table>
         <tr>
           <th>Imię</th>
@@ -52,6 +37,6 @@
       </table>
     </div>
     
-    <footer></footer>
+    <?php include "footer.php" ?>
   </body>
 </html>
