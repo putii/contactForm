@@ -24,10 +24,10 @@
             foreach($pdo->query('SELECT * FROM messages') as $row) {
               echo "<tr>\n";
               echo "<td>".$row['name']."</td>";
-              echo "<td>".$row['email']."</td>";
+              echo "<td>".$row['mail']."</td>";
               echo "<td>".$row['subject']."</td>";
               echo "<td>".$row['message']."</td>";
-              echo "<td>".$row['send_at']."</td>";
+              echo "<td>".$row['sent_at']."</td>";
               echo "</tr>\n";
             }
           } catch (PDOException $e) {

@@ -24,7 +24,7 @@
 
     try {
       $stmt = $pdo->prepare(
-        "INSERT INTO messages (name, email, subject, message, send_at) VALUES (?, ?, ?, ?, NOW())"
+        "INSERT INTO messages (name, mail, subject, message, sent_at) VALUES (?, ?, ?, ?, NOW())"
       );
       $stmt->execute([$name, $mail, $subject, $message]);
     } catch (PDOException $e) {
